@@ -1,0 +1,24 @@
+{
+  "name": "swt-store/asian-store-api",
+  "description": "Simple PHP 8.2 API that proxies TheMealDB and exposes store-like items with filters",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "guzzlehttp/guzzle": "^7.9",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require-dev": {},
+  "scripts": {
+    "start": "php -S localhost:8000 -t public",
+    "post-autoload-dump": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}
+
+
